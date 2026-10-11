@@ -9,16 +9,19 @@ class CalcProvider extends ChangeNotifier{
   double result=0;
 
   void filled(String op){
-    if(ctr.text !=""){
+    if(text=="ERROR"){
+      clear();
+    }
+    if(ctr.text !="" ||text!=""){
       choosedOperator(op);
     }
+    
   }
   void choosedOperator(String op){
     
     if (op == "=" ){
-      
           if (operator=="*"){
-          multi();
+            multi();
         }
         else if (operator=="/"){
           division();
@@ -29,9 +32,8 @@ class CalcProvider extends ChangeNotifier{
         else if (operator=="-"){
           sub();
         }
-     
-        
         operator=op;
+        
         
         
     }
@@ -45,7 +47,6 @@ class CalcProvider extends ChangeNotifier{
         text+=operator;
       
       }
-      
       else{
         
         if (operator=="*"){
@@ -127,18 +128,29 @@ class CalcProvider extends ChangeNotifier{
     ctr.clear();
   }
   void division(){
-    operand2=ctr.text;
-    text+=ctr.text;
-    // if (double.parse(operand2)==0){
-    //   try {
+    try{
 
-    //   }
-    //   catch 
-    // }
-    result=double.parse(operand1)/double.parse(operand2);
-    text=result.toString();
-    operand1=result.toString();
-    ctr.clear();
+        operand2=ctr.text;
+        text+=ctr.text;
+        if (double.parse(operand2)!=0){
+          result=double.parse(operand1)/double.parse(operand2);
+          text=result.toString();
+          operand1=result.toString();
+          ctr.clear();
+        }
+        else {
+          text="ERROR";
+          
+        }
+          
+        
+        
+        
+    }
+    catch (e){
+      text="ERROR";
+    }
+    
   }
   void sum(){
     operand2=ctr.text;
