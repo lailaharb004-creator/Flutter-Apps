@@ -80,7 +80,7 @@ class HomePage extends StatelessWidget{
               children: [
                 MaterialButton(onPressed: (){context.read<CalcProvider>().clear();},minWidth: 120,shape:RoundedRectangleBorder(borderRadius: .circular(20)),padding: .all(15),color: Color(0XFF1E293B),child: Text("C", style: TextStyle(color: Colors.white, fontSize: 30, fontWeight: .bold),),),
                 MaterialButton(onPressed: (){context.read<CalcProvider>().backspace();},minWidth: 120,shape:RoundedRectangleBorder(borderRadius: .circular(20)),padding: .all(20),color: Color(0XFF1E293B),child: Icon(Icons.backspace, color: Colors.white,size: 30,),),
-                MaterialButton(onPressed: (){context.read<CalcProvider>().choosedOperator("/");},shape:RoundedRectangleBorder(borderRadius: .circular(20)), padding: .all(20),color: Color(0XFFF59E0B),child: Icon(Icons.percent ,color: Colors.white,size: 30,) ,),
+                MaterialButton(onPressed: (){context.read<CalcProvider>().filled("/");},shape:RoundedRectangleBorder(borderRadius: .circular(20)), padding: .all(20),color: Color(0XFFF59E0B),child: Icon(Icons.percent ,color: Colors.white,size: 30,) ,),
               ],
             ),
                       ),
@@ -92,7 +92,7 @@ class HomePage extends StatelessWidget{
                 MaterialButton(onPressed: (){context.read<CalcProvider>().num7();},minWidth: 80,shape:RoundedRectangleBorder(borderRadius: .circular(20)),padding: .all(15) , color: Color(0XFF1E293B),child: Text("7",style: TextStyle(fontSize: 30, fontWeight: .bold, color: Colors.white),),),
                 MaterialButton(onPressed: (){context.read<CalcProvider>().num8();},minWidth: 80,shape:RoundedRectangleBorder(borderRadius: .circular(20)),padding: .all(15) , color: Color(0XFF1E293B),child: Text("8",style: TextStyle(fontSize: 30, fontWeight: .bold, color: Colors.white),),),
                 MaterialButton(onPressed: (){context.read<CalcProvider>().num9();},minWidth: 80,shape:RoundedRectangleBorder(borderRadius: .circular(20)),padding: .all(15) , color: Color(0XFF1E293B),child: Text("9",style: TextStyle(fontSize: 30, fontWeight: .bold, color: Colors.white),),),
-                MaterialButton(onPressed: (){context.read<CalcProvider>().choosedOperator("*");},minWidth: 80,shape:RoundedRectangleBorder(borderRadius: .circular(20)),padding: .all(20) , color: Color(0XFFF59E0B),child: Text("x",style: TextStyle(fontSize: 25, fontWeight: .bold, color: Colors.white),)),
+                MaterialButton(onPressed: (){context.read<CalcProvider>().filled("*");},minWidth: 80,shape:RoundedRectangleBorder(borderRadius: .circular(20)),padding: .all(20) , color: Color(0XFFF59E0B),child: Text("x",style: TextStyle(fontSize: 25, fontWeight: .bold, color: Colors.white),)),
             
               ],
             ),
@@ -106,7 +106,7 @@ class HomePage extends StatelessWidget{
                 MaterialButton(onPressed: (){context.read<CalcProvider>().num4();},minWidth: 80,shape:RoundedRectangleBorder(borderRadius: .circular(20)),padding: .all(15) , color: Color(0XFF1E293B),child: Text("4",style: TextStyle(fontSize: 30, fontWeight: .bold, color: Colors.white),),),
                 MaterialButton(onPressed: (){context.read<CalcProvider>().num5();},minWidth: 80,shape:RoundedRectangleBorder(borderRadius: .circular(20)),padding: .all(15) , color: Color(0XFF1E293B),child: Text("5",style: TextStyle(fontSize: 30, fontWeight: .bold, color: Colors.white),),),
                 MaterialButton(onPressed: (){context.read<CalcProvider>().num6();},minWidth: 80,shape:RoundedRectangleBorder(borderRadius: .circular(20)),padding: .all(15) , color: Color(0XFF1E293B),child: Text("6",style: TextStyle(fontSize: 30, fontWeight: .bold, color: Colors.white),),),
-                MaterialButton(onPressed: (){context.read<CalcProvider>().choosedOperator("-");},minWidth: 80,shape:RoundedRectangleBorder(borderRadius: .circular(20)),padding: .all(20) , color: Color(0XFFF59E0B),child: Icon(Icons.remove,color: Colors.white,size: 30,),)
+                MaterialButton(onPressed: (){context.read<CalcProvider>().filled("-");},minWidth: 80,shape:RoundedRectangleBorder(borderRadius: .circular(20)),padding: .all(20) , color: Color(0XFFF59E0B),child: Icon(Icons.remove,color: Colors.white,size: 30,),)
             
               ],
             ),
@@ -120,7 +120,7 @@ class HomePage extends StatelessWidget{
                 MaterialButton(onPressed: (){context.read<CalcProvider>().num1();},minWidth: 80,shape:RoundedRectangleBorder(borderRadius: .circular(20)),padding: .all(15) , color: Color(0XFF1E293B),child: Text("1",style: TextStyle(fontSize: 30, fontWeight: .bold, color: Colors.white),),),
                 MaterialButton(onPressed: (){context.read<CalcProvider>().num2();},minWidth: 80,shape:RoundedRectangleBorder(borderRadius: .circular(20)),padding: .all(15) , color: Color(0XFF1E293B),child: Text("2",style: TextStyle(fontSize: 30, fontWeight: .bold, color: Colors.white),),),
                 MaterialButton(onPressed: (){context.read<CalcProvider>().num3();},minWidth: 80,shape:RoundedRectangleBorder(borderRadius: .circular(20)),padding: .all(15) , color: Color(0XFF1E293B),child: Text("3",style: TextStyle(fontSize: 30, fontWeight: .bold, color: Colors.white),),),
-                MaterialButton(onPressed: (){context.read<CalcProvider>().choosedOperator("+");},minWidth: 80,shape:RoundedRectangleBorder(borderRadius: .circular(20)),padding: .all(20) , color: Color(0XFFF59E0B),child: Icon(Icons.add ,color: Colors.white,size: 30,),),
+                MaterialButton(onPressed: (){context.read<CalcProvider>().filled("+");},minWidth: 80,shape:RoundedRectangleBorder(borderRadius: .circular(20)),padding: .all(20) , color: Color(0XFFF59E0B),child: Icon(Icons.add ,color: Colors.white,size: 30,),),
             
               ],
             ),
@@ -133,7 +133,7 @@ class HomePage extends StatelessWidget{
               children: [
                 MaterialButton(onPressed: (){context.read<CalcProvider>().num0();},minWidth: 170,shape:RoundedRectangleBorder(borderRadius: .circular(20)),padding: .all(15) , color: Color(0XFF1E293B),child: Text("0",style: TextStyle(fontSize: 30, fontWeight: .bold, color: Colors.white),),),
                 MaterialButton(onPressed: (){context.read<CalcProvider>().dot();},minWidth: 80,shape:RoundedRectangleBorder(borderRadius: .circular(20)),padding: .all(15) , color: Color(0XFF1E293B),child: Text(".",style: TextStyle(fontSize: 30, fontWeight: .bold, color: Colors.white),),),
-                MaterialButton(onPressed: (){context.read<CalcProvider>().choosedOperator("=");},minWidth: 80,shape:RoundedRectangleBorder(borderRadius: .circular(20)),padding: .all(15) , color: Color(0XFF10B981),child: Text("=",style: TextStyle(fontSize: 30, fontWeight: .bold, color: Colors.white),),),
+                MaterialButton(onPressed: (){context.read<CalcProvider>().filled("=");},minWidth: 80,shape:RoundedRectangleBorder(borderRadius: .circular(20)),padding: .all(15) , color: Color(0XFF10B981),child: Text("=",style: TextStyle(fontSize: 30, fontWeight: .bold, color: Colors.white),),),
               ],
             ),
                       )
