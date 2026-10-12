@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(create:(context) => SHPassword(),
+    return ChangeNotifierProvider(create:(context) => SHPasswordProvider(),
     child: MaterialApp(
       debugShowCheckedModeBanner: false,
       home: HomePage(),
@@ -26,21 +26,28 @@ class HomePage extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    var x =context.watch<SHPassword>();
+    var x =context.watch<SHPasswordProvider>();
     return Scaffold(
       body:Padding(
         padding: const EdgeInsets.all(20),
-        child: SizedBox(
-          width: 380,
-          child: TextField(
-            decoration: InputDecoration(
-              border: OutlineInputBorder(borderRadius: .circular(20)),
-              suffixIcon: IconButton(
-                onPressed: (){},
-                icon: Icon(Icons.visibility)
-                )
+        child: Column(
+          mainAxisAlignment: .center,
+          crossAxisAlignment: .center,
+          children: [
+            SizedBox(
+              width: 380,
+              child: TextField(
+                controller: x.ctr,
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(borderRadius: .circular(20)),
+                  suffixIcon: IconButton(
+                    onPressed: (){context.read<SHPasswordProvider>().showHide();},
+                    icon: Icon(Icons.visibility)
+                    )
+                ),
+              )
             ),
-          )
+          ],
         ),
       )
     );
