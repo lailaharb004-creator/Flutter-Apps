@@ -126,6 +126,7 @@ class CalcProvider extends ChangeNotifier{
     text=result.toString();
     operand1=result.toString();
     ctr.clear();
+    notifyListeners();
   }
   void division(){
     try{
@@ -150,7 +151,7 @@ class CalcProvider extends ChangeNotifier{
     catch (e){
       text="ERROR";
     }
-    
+    notifyListeners();
   }
   void sum(){
     operand2=ctr.text;
@@ -159,6 +160,7 @@ class CalcProvider extends ChangeNotifier{
     text=result.toString();
     operand1=result.toString();
     ctr.clear();
+    notifyListeners();
   }
   void sub(){
     operand2=ctr.text;
@@ -167,6 +169,7 @@ class CalcProvider extends ChangeNotifier{
     text=result.toString();
     operand1=result.toString();
     ctr.clear();
+    notifyListeners();
   }
   void clear(){
     operand1="";
